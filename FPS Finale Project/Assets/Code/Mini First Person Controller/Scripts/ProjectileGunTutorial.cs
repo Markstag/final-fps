@@ -5,6 +5,8 @@ using TMPro;
 
 public class ProjectileGunTutorial : MonoBehaviour
 {
+    public bool canTeleport;
+
   public GameObject bullet;
 
   public float shootForce, upwardForce;
@@ -35,7 +37,7 @@ public class ProjectileGunTutorial : MonoBehaviour
     {
         MyInput();
 
-        if (ammunitionDisplay != null);
+        if (ammunitionDisplay != null)
             ammunitionDisplay.SetText(bulletsLeft / bulletPerTap + " / " + magazineSize / bulletPerTap);
     }
 
@@ -76,12 +78,16 @@ public class ProjectileGunTutorial : MonoBehaviour
 
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
-        GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
+        GameObject currentBullet = Instantiate(bullet, attackPoint.position, attackPoint.rotation);
+
+        // Check if can teleport
+        currentBullet.GetComponent<Bullet>().canTeleport = canTeleport;
 
         currentBullet.transform.forward = directionWithSpread.normalized;
 
-        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
+        currentBullet.GetComponent<Rigidbody>().AddForce(attackPoint.transform.forward * shootForce, ForceMode.Impulse); // #broken - directionWithSpread is causing bullets flying all directions
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
+
 
         if(muzzleFlash !=null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
