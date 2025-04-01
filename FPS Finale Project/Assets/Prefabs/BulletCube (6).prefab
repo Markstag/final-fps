@@ -250,7 +250,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 788
+  m_VersionIndex: 821
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -303,7 +303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d3a96092080e12488ecf3f110eb148d, type: 2}
+  - {fileID: 2100000, guid: f2ab4540a716cb742974fea7abccafcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,6 +372,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ccd69b526924d44a990a37eed0c16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canTeleport: 0
+  canBreak: 0
+  canPierce: 0
+  canRicochet: 0
+  canTime: 0
+  player: {fileID: 0}
+  maxHealth: 2
+  currentHealth: 2
+  frames: 5
 --- !u!65 &63946514567558544
 BoxCollider:
   m_ObjectHideFlags: 0

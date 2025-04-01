@@ -6,6 +6,11 @@ using TMPro;
 public class ProjectileGunTutorial : MonoBehaviour
 {
     public bool canTeleport;
+    public bool canBreak;
+    public bool canPierce;
+    public bool canRicochet;
+    public bool canTime;
+
 
   public GameObject bullet;
 
@@ -82,6 +87,10 @@ public class ProjectileGunTutorial : MonoBehaviour
 
         // Check if can teleport
         currentBullet.GetComponent<Bullet>().canTeleport = canTeleport;
+        currentBullet.GetComponent<Bullet>().canPierce = canPierce;
+        currentBullet.GetComponent<Bullet>().canRicochet = canRicochet;
+        currentBullet.GetComponent<Bullet>().canTime = canTime;
+        currentBullet.GetComponent<Bullet>().canBreak = canBreak;
 
         currentBullet.transform.forward = directionWithSpread.normalized;
 
