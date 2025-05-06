@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3414428424799437771}
   - component: {fileID: 6124708184867772439}
   - component: {fileID: 7188309483951202891}
+  - component: {fileID: 8349303095438795831}
   m_Layer: 0
   m_Name: Breakabel
   m_TagString: Break
@@ -248,7 +249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 906
+  m_VersionIndex: 912
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -353,3 +354,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!208 &8349303095438795831
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198016708862696967}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.777, y: 1.197, z: 0.67800003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.777, y: 1.197, z: -0.67800003}
+  m_TimeToStationary: 0.5
