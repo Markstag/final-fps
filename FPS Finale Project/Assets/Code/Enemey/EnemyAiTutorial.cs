@@ -45,15 +45,17 @@ public class EnemyAiTutorial : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) Attackplayer();
-
+        Debug.Log(walkPointSet);
     }
 
     private void Patroling()
     {
-        if (!walkPointSet) SearchWalkPoint();
-
-        if (walkPointSet)
+        if (!walkPointSet) {
+            SearchWalkPoint();
+        } else if (walkPointSet){
             agent.SetDestination(walkPoint);
+            Debug.Log("HERE");
+        }
 
         Vector3 disstanceToWalkPoint = transform.position - walkPoint;
 
@@ -63,6 +65,7 @@ public class EnemyAiTutorial : MonoBehaviour
     }
     private void SearchWalkPoint()
     {
+        
         //calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);

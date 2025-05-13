@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 3780729141183474874}
   - component: {fileID: -8091782447752979241}
   - component: {fileID: 63946514567558544}
-  - component: {fileID: -6463154539077683934}
   m_Layer: 0
   m_Name: BulletCube (6)
   m_TagString: Untagged
@@ -403,24 +402,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.100000024, y: 0.10000001, z: 0.100000024}
   m_Center: {x: -0.40504074, y: 0.2915182, z: -0.5446625}
---- !u!114 &-6463154539077683934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848127269848115502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0f4742dc0db2844915f2956412fb66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canTeleport: 0
-  canBreak: 0
-  canPierce: 0
-  canRicochet: 0
-  canTime: 0
-  player: {fileID: 0}
-  maxHealth: 0
-  currentHealth: 0
-  frames: 0
